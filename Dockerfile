@@ -31,6 +31,6 @@ EXPOSE 5198
 # Variable de ambiente para el puerto
 ENV ASPNETCORE_HTTP_PORTS=5198
 
-HEALTHCHECK --interval=30s --timeout=10s --start-period=5s CMD curl -f http://localhost:5198/Contenedor || exit 1
+HEALTHCHECK --interval=30s --timeout=10s --start-period=10s CMD curl -f http://localhost:5198/Contenedor || exit 1
 
 ENTRYPOINT ["/src/start.sh"]
